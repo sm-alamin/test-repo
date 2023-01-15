@@ -1,0 +1,685 @@
+/* Second Assignment:
+Course Instructor: Jhankar Mahbub,
+Prepared by: Mohammad Al-Amin
+*/
+
+/*** 
+
+====================================================================
+      CSS Structure:
+      1: Fonts
+      2: Common Part
+      3. Css Variables
+      4. Header Style
+      5. Feature Top Section Style
+      6. Feature Details Section Style
+      7. Facts Section Style
+      8. Contact Us Section Style
+      9. Sponsor Section Style
+      10. Footer Section Style
+      11. Media Query for Mobile Device
+      12. Media Query for Tablet Device
+
+
+====================================================================
+
+ ***/
+/* 
+====================================================================
+  1. Fonts
+==================================================================== 
+*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Open+Sans&family=Work+Sans:wght@700&display=swap");
+
+/*** 
+
+====================================================================
+  2. Css Variables
+====================================================================
+
+***/
+:root {
+  /* font-color */
+  --dark-black: #131313;
+  --gray: #424242;
+  --light-gray: #727272;
+  --white: #ffffff;
+  --orange: #ff900e;
+
+  /* background color */
+  --header-bg: rgba(255, 144, 14, 0.1);
+  --bg-orange: #ff900e;
+}
+
+/*** 
+
+====================================================================
+ 3. Common Part
+====================================================================
+
+***/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+.btn-primary {
+  color: var(--white);
+  background-color: var(--bg-orange);
+  padding: 20px;
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  width: 180px;
+}
+.title {
+  font-weight: 600;
+  font-size: 45px;
+  color: var(--dark-black);
+}
+.description {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--light-gray);
+  width: 100%;
+  margin: 10px 0;
+}
+/*** 
+
+/*
+====================================================================
+  4. Header Style
+==================================================================== 
+*/
+.header {
+  width: 100%;
+  height: 1346px;
+  padding-top: 24px;
+  background-color: var(--header-bg);
+}
+.header-container {
+  display: flex;
+  justify-content: space-around;
+}
+.header-title {
+  color: var(--dark-black);
+  font-weight: 700;
+  font-size: 45px;
+  padding-top: 8px;
+}
+.navbar ul {
+  display: flex;
+}
+.navbar ul li {
+  list-style-type: none;
+  padding: 20px;
+}
+.navbar ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--light-gray);
+}
+.navbar ul li a:hover {
+  color: var(--dark-black);
+}
+.header-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 116px;
+  text-align: center;
+}
+.header-info-title {
+  font-weight: 700;
+  font-size: 64px;
+  color: var(--dark-black);
+}
+.header-info-description {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--light-gray);
+  margin: 32px 0;
+}
+.header-banner {
+  margin: 50px 0;
+  width: 85%;
+  height: 700px;
+}
+.header-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*** 
+
+====================================================================
+  5. Feature Top Section Style
+====================================================================
+
+***/
+.feature-container{
+    margin-top: 60px;
+}
+.feature-top {
+  display: flex;
+  gap: 20px;
+}
+.feature-photo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  width: 100%;
+}
+.feature-photo img {
+  width: 343px;
+  height: 342px;
+  border-radius: 10px;
+}
+.feature-top-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.feature-top-heading h3 {
+  font-weight: 500;
+  font-size: 45px;
+  width: 100%;
+  height: 106px;
+}
+.feature-top-heading .light-gray {
+  color: var(--light-gray);
+}
+.feature-top-heading .dark-black {
+  color: var(--dark-black);
+}
+.feature-top-heading .dark-orange {
+  color: var(--orange);
+}
+.feature-top-heading p {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--light-gray);
+  width: 100%;
+  height: 78px;
+  margin: 30px 0;
+}
+/*** 
+
+====================================================================
+  6. Feature Details Section Style
+====================================================================
+
+***/
+.feature-details-container {
+  margin: 100px 0;
+}
+.custom-border{
+    border-left: 3px solid #FF900E;
+    font-weight: 700;
+}
+.feature-details {
+  display: flex;
+  gap: 54px;
+}
+.feature-article {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.feature-details-photo {
+  width: 100%;
+  height: 1059;
+  position: relative;
+}
+.feature-details-photo img{
+    width: 100%;
+    height: 100%;
+}
+.btn-big {
+  color: var(--white);
+  background-color: var(--bg-orange);
+  padding: 15px 15px;
+  font-weight: 700;
+  font-size: 65px;
+  border-radius: 10px;
+  border: none;
+  position: relative;
+  top: -10%;
+  left: -10%;
+}
+.small-font-experience {
+  font-size: 25px;
+}
+.card-container{
+  width: 100%;
+  padding: 20px;
+}
+.card {
+  width: 80%;
+  height: 155px;
+  background-color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 8px;
+  padding: 30px;
+  margin-top: 20px;
+}
+.card .card-title {
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--dark-black);
+}
+.card .card-description {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--light-gray);
+  margin-top: 10px;
+}
+/*** 
+
+====================================================================
+  7. Fact Section Style
+====================================================================
+
+***/
+.fact-content-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 60px;
+  padding: 50px;
+}
+.fact {
+  width: 242px;
+  height: 242px;
+  background-color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 8px;
+  border: 1px solid #ff900e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  transition: all 1s ease-in-out;
+}
+.fact:hover{
+  transform: rotate(360deg) scale(0.8);
+  box-shadow: inset 0 0 0 25px #53a7ea;
+}
+/*** 
+
+====================================================================
+  8. Contact Us Section Style
+====================================================================
+
+***/
+.contact-container{
+  border-radius: 6px;
+  padding: 40px 60px 30px 40px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.contact-container .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content .left-side{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  position: relative;
+}
+.address-details{
+  margin: 14px;
+  text-align: center;
+}
+.address-details i{
+  font-size: 30px;
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+.address-details .topic{
+  font-size: 18px;
+  font-weight: 500;
+}
+.address-details .text{
+  font-size: 14px;
+  color: #afafb6;
+}
+.content .right-side{
+  width: 75%;
+  margin-left: 75px;
+}
+.right-side .topic-text{
+  font-size: 23px;
+  font-weight: 600;
+  color: var(--dark-black);
+}
+.right-side .input-box{
+  height: 50px;
+  width: 100%;
+  margin: 12px 0;
+}
+.right-side .input-box input,
+.right-side .input-box textarea{
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  background: #F0F1F8;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.right-side .message-box{
+  min-height: 110px;
+}
+.right-side .input-box textarea{
+  padding-top: 6px;
+}
+.right-side .button{
+  display: inline-block;
+  margin-top: 12px;
+}
+.right-side .button input[type="submit"]{
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: var(--bg-orange);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button input[type="submit"]:hover{
+  background:var(--gray);
+}
+/*** 
+
+====================================================================
+  9. Sponsor Section Style
+====================================================================
+
+***/
+.sponsors {
+  margin: 130px 0;
+}
+.sponsors-details {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+.sponsors-logo {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.sponsors-logo img {
+  filter: grayscale(100%);
+}
+/*** 
+
+====================================================================
+  10. Footer
+====================================================================
+
+***/
+/*  */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--header-bg);
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+}
+.hide {
+  display: none;
+}
+/*** 
+
+====================================================================
+  11. Media Query for Mobile Device
+====================================================================
+
+***/
+@media only screen and (max-width: 576px) {
+  /* header section */
+  .header {
+    width: 100%;
+    height: 100%;
+  }
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+  }
+  .navbar ul {
+    flex-direction: column;
+  }
+  .header-info {
+    margin-top: 70px;
+    padding: 10px;
+  }
+  .header-info-title {
+    font-size: 45px;
+  }
+  .header-banner {
+    height: 500px;
+  }
+  /* feature-top */
+  .feature-top {
+    flex-direction: column;
+  }
+  .feature-photo {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
+  .feature-photo img {
+    width: 100%;
+    height: 100%;
+  }
+  .feature-top-heading {
+    align-items: center;
+  }
+  /* feature details */
+  .feature-details {
+    flex-direction: column;
+  }
+  .feature-article {
+    width: 100%;
+  }
+
+  .feature-details-photo {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 100px;
+  }
+  .feature-details-photo img {
+    width: 100%;
+    height: 100%;
+  
+  }
+  .btn-big {
+    padding: 32px 35px;
+    font-size: 45px;
+    border-radius: 10px;
+    margin-left: 20%;
+    margin-top: 10px;
+    top: 0;
+    left:0;
+  }
+  .small-font-experience {
+    font-size: 25px;
+  }
+  .card {
+    width: 95%;
+    height: 100%;
+    padding: 10px;
+  }
+  /* fact section */
+  .fact-content-container {
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+  }
+  .fact {
+    width: 100%;
+    height: 100%;
+  }
+  /* contact us */
+  .contact-container .content{
+    flex-direction: column;
+  }
+  .content .left-side{
+    width: 100%;
+  }
+  .content .right-side{
+    width: 100%;
+    margin-left: 15px;
+    text-align: center;
+  }
+  
+  /* Sponsor Section */
+  
+  .sponsors-logo {
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    margin-top: 20px;
+
+  }
+  .sponsors-logo img {
+    margin: 0 auto;
+  }
+
+}
+
+/* 
+====================================================================
+   12. Media Query for Tablet Device
+==================================================================== 
+*/
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  /* header section */
+  .header {
+    width: 100%;
+    height: 100%;
+  }
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+  }
+  .navbar ul {
+    flex-direction: column;
+  }
+  .header-info {
+    margin-top: 70px;
+    padding: 10px;
+  }
+  .header-info-title {
+    font-size: 45px;
+  }
+  .header-banner {
+    height: 500px;
+  }
+  /* feature-top */
+  .feature-top {
+    flex-direction: column;
+  }
+  .feature-photo {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+  }
+  .feature-photo img {
+    width: 100%;
+    height: 100%;
+  }
+  .feature-top-heading {
+    align-items: center;
+  }
+  /* feature details */
+  .feature-details {
+    flex-direction: column;
+  }
+  .feature-article {
+    width: 100%;
+  }
+
+  .feature-details-photo {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 100px;
+  }
+  .feature-details-photo img {
+    width: 100%;
+    height: 100%;
+  
+  }
+  .btn-big {
+    padding: 32px 35px;
+    font-size: 45px;
+    border-radius: 10px;
+    margin-left: 20%;
+    margin-top: 10px;
+    top: 0;
+    left:0;
+  }
+  .small-font-experience {
+    font-size: 25px;
+  }
+  .card {
+    width: 95%;
+    height: 100%;
+    padding: 10px;
+  }
+  /* fact section */
+  .fact-content-container {
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 20px;
+  }
+  .fact {
+    width: 100%;
+    height: 100%;
+  }
+  /* contact us */
+  .contact-container .content{
+    flex-direction: column;
+  }
+  .content .left-side{
+    width: 100%;
+  }
+  .content .right-side{
+    width: 100%;
+    margin-left: 15px;
+    text-align: center;
+  }
+  
+  /* Sponsor Section */
+  
+  .sponsors-logo {
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    margin-top: 20px;
+
+  }
+  .sponsors-logo img {
+    margin: 0 auto;
+  }
+}
